@@ -3,7 +3,7 @@ const library = require("../model/libModel");
 const bookmenu = asyncHandler( async (req,res)=>{
     const books =  await library.find();
     console.log(books);
-    res.render("home",{data:books});
+    res.render("index",{data:books});
 })
 
 const addbook = asyncHandler(async(req,res)=>{
@@ -38,6 +38,9 @@ const deletebook = asyncHandler(async(req,res)=>{
     }
 })
 
+const loginsign = asyncHandler(async(req,res)=>{
+    res.render("signuplogin");
+});
 
 
-module.exports = {bookmenu,addbook,deletebook};
+module.exports = {bookmenu,addbook,deletebook,loginsign};

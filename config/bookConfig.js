@@ -4,6 +4,7 @@ const dbConnect = async()=>{
     try{
         dbmongoose = await mongoose.connect(process.env.CONNECTION_STRING);
         console.log("Connected successfully");
+        
     }
 
     catch(err)
@@ -11,5 +12,6 @@ const dbConnect = async()=>{
         console.log(err);
     }
 }
+
 
 module.exports= dbConnect;
